@@ -4,3 +4,17 @@
 .title .title-window{z-index:-3}.title .husband{z-index:-2;filter:brightness(.9) drop-shadow(-15px 5px 25px #000)}.title .grade{background:linear-gradient(0deg,#091320 0%,#09132077 25%,transparent 80%),linear-gradient(90deg,#091320a0,transparent 90%)}
 @media(max-width:700px){.title .husband{right:-35%;height:95%;top:8%}.title-window img{left:-50%;opacity:.65}.title .title-art{top:28%}.title .overline{background:#09132070;padding:6px}.title .hook{background:#09132060;width:fit-content;padding:6px}}
 @media(max-width:350px){.title .husband{right:-52%}.title-window img{left:-65%}}
+
+/* Reserve a real visual row before dialogue. Short mobile windows scroll naturally. */
+@media(max-width:700px){
+ .stage.has-phone{height:auto;min-height:calc(100svh - 32px);max-height:none;padding:430px 0 66px}
+ .has-phone .phone-card{top:86px;left:20px;width:142px;transform:rotate(-4deg)}
+ .has-phone .husband{top:80px;height:365px;right:-3%}
+ .has-phone .dialogue-shell{position:relative;top:auto;bottom:auto;left:auto;margin:0 12px;width:calc(100% - 24px)}
+ .has-phone .background{height:450px}
+}
+@media(max-width:350px){
+ .has-phone .phone-card{left:15px;width:142px}
+ .has-phone .husband{right:-8%}
+ .has-phone .dialogue-shell{margin-inline:10px;width:calc(100% - 20px)}
+}
